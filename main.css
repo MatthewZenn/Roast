@@ -1,0 +1,254 @@
+html, body {
+  background-color: #292e30;
+}
+
+@font-face {
+  font-family: SegoeIcons;
+  src:url("Assets/Segoe Fluent Icons.ttf");
+}
+
+@font-face {
+font-family: Consolas;
+src:url("Assets/consola.ttf");
+}
+
+::placeholder {
+  font-style: italic;
+  color: #636e72;
+}
+
+header {
+  -webkit-app-region: drag;
+  height: 35px;
+  background-color: #292e30;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-bottom: 2px solid rgb(70, 135, 255);
+}
+
+#pathfield {
+  position: relative;
+  left: 45%;
+  top: 32%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 25px;
+  background-color: #373c3d;
+  color: #dfe6e9;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-app-region: no-drag;
+  outline: none;
+  font-size: 12pt;
+}
+
+#pathfield:focus {
+  border: 1px solid rgb(70, 135, 255);
+}
+
+.icon {
+position: relative;
+left:  10px;
+top: 5px;
+height: 25px;
+-webkit-app-region: no-drag;
+}
+
+.traffic {
+position: fixed;
+right: 0;
+top: 0;
+margin: 0;
+-webkit-app-region: no-drag;
+padding: none;
+}
+
+#close {
+width: 50px;
+height: 30px;
+background-color: transparent;
+margin: none;
+border: none;
+color: #636e72;
+font-size: 14pt;
+font-family: SegoeIcons;
+font-weight: 500;
+}
+
+#close:hover {
+cursor: pointer;
+color: rgb(255, 70, 70);
+}
+
+#min {
+width: 50px;
+height: 30px;
+background-color: transparent;
+margin: none;
+border: none;
+color: #636e72;
+font-size: 14pt;
+font-family: SegoeIcons;
+font-weight: 500;
+}
+
+#min:hover {
+color: white;
+cursor: pointer;
+}
+
+#textcontainer {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 95%;
+  width: 35%;
+  display: block;
+  font-family: Consolas, "Courier New", Courier, monospace;
+  background-color: #292e30;
+  border-left: 1px solid #474f52;
+  z-index: -1;
+  overflow-y: scroll;
+}
+
+#editor {
+  position: absolute;
+  top: 0px;
+  left: 45px;
+  height: 100%;
+  width: 96%;
+  background-color: #292e30;
+  color: #dfe6e9;
+  font-size: 14pt;
+  outline: none;
+  border: none;
+  resize: none;
+  padding-left: 5px;
+  padding-top: 10px;
+  display: block;
+  font-family: Consolas, 'Courier New', Courier, monospace;
+}
+
+#numbers {
+  position: absolute;
+  width: 10px;
+  left: 5px;
+  top: 0;
+  background-color: none;
+  font-size: 14pt;
+  padding-top: 10px;
+  text-align: right;
+  font-family: Consolas, 'Courier New', Courier, monospace;
+}
+
+#numbers span {
+  counter-increment: linenumber;
+}
+
+#numbers span::before {
+  content: counter(linenumber);
+  display: block;
+  color: #636e72;
+}
+
+#textcontainer::-webkit-scrollbar {
+  width: 20px;
+  display: none;
+}
+ 
+#textcontainer::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+ 
+#textcontainer::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.25);
+  outline: none
+}
+
+.shell {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #474f52;
+  width: 100%;
+  display: inline-block;
+  height: 30px;
+  z-index: 2;
+  background-color: #292e30;
+}
+
+.arrow {
+  position: relative;
+  font-family: SegoeIcons;
+  font-size: 14pt;
+  color: rgb(70, 135, 255);
+  top: 5px;
+  left: 5px;
+}
+
+#console {
+  position: relative;
+  font-family: Consolas;
+  font-weight: lighter;
+  font-size: 12pt;
+  color: rgb(70, 135, 255);
+  outline: none;
+  background-color: transparent;
+  border: none;
+  width: 50%;
+}
+
+#listContainer {
+  position: absolute;
+  width: 20%;
+  left: 0;
+  bottom: 0;
+  height: 95%;
+  z-index: -2;
+  background-color: #292e30;
+  display: block;
+  justify-content: center;
+  border-right: 1px solid #474f52;
+}
+
+#fileBlock {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  background-color: #292e30;
+  display: inline-flex;
+  border-bottom: 1px solid #474f52;
+}
+
+#fileName {
+  position: relative;
+  top: -10px;
+  left: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #dfe6e9;
+  font-size: 14pt;
+}
+
+#Run {
+  position: relative;
+  right: 10px;
+  margin-left: 60%;
+  color: rgb(70, 135, 255);
+  font-family: SegoeIcons;
+  font-size: 16pt;
+  background-color: transparent;
+  border: none;
+}
+
+#Run:hover {
+  color: #dfe6e9;
+  cursor: pointer;
+}
+
+#fileBlock:hover {
+  background-color: #373c3d;
+  cursor: pointer;
+}
