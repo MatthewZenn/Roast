@@ -171,8 +171,9 @@ cursor: pointer;
 .shell {
   position: fixed;
   bottom: 0;
-  left: 0;
+  left: 15%;
   border-top: 1px solid #474f52;
+  border-left: 1px solid #474f52;
   width: 100%;
   display: inline-block;
   height: 30px;
@@ -203,11 +204,11 @@ cursor: pointer;
 
 #listContainer {
   position: absolute;
-  width: 20%;
+  width: 15%;
   left: 0;
   bottom: 0;
   height: 95%;
-  z-index: -2;
+  z-index: -1;
   background-color: #292e30;
   display: block;
   justify-content: center;
@@ -232,15 +233,22 @@ cursor: pointer;
   font-size: 14pt;
 }
 
+.text-controls {
+  position: fixed;
+  left: 77%;
+  top: 8px;
+  display: inline;
+}
+
 #Run {
   position: relative;
-  right: 10px;
-  margin-left: 60%;
+  left: 3px;
   color: rgb(70, 135, 255);
   font-family: SegoeIcons;
-  font-size: 16pt;
+  font-size: 12pt;
   background-color: transparent;
   border: none;
+  -webkit-app-region: no-drag;
 }
 
 #Run:hover {
@@ -248,7 +256,54 @@ cursor: pointer;
   cursor: pointer;
 }
 
+#copy {
+  position: relative;
+  left: 3px;
+  color: rgb(70, 135, 255);
+  font-family: SegoeIcons;
+  font-size: 12pt;
+  background-color: transparent;
+  border: none;
+  -webkit-app-region: no-drag;
+}
+
+#copy:hover {
+  color: #dfe6e9;
+  cursor: pointer;
+}
+
+#delete {
+  position: relative;
+  left: 3px;
+  color: rgb(70, 135, 255);
+  font-family: SegoeIcons;
+  font-size: 12pt;
+  background-color: transparent;
+  border: none;
+  -webkit-app-region: no-drag;
+}
+
+#delete:hover {
+  color: #dfe6e9;
+  cursor: pointer;
+}
+
 #fileBlock:hover {
   background-color: #373c3d;
   cursor: pointer;
+}
+
+#log {
+  position: absolute;
+  width: 50%;
+  left: 15%;
+  bottom: 0;
+  height: 94%;
+  z-index: -2;
+  background-color: #292e30;
+  border: none;
+  color: #dfe6e9;
+  font-family: Consolas;
+  font-size: 12pt;
+  outline: none;
 }

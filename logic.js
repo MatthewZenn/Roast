@@ -1,4 +1,4 @@
-const fs = require('fs');
+
 const textarea = document.getElementById('editor');
 const numbers = document.getElementById("numbers");
 
@@ -37,6 +37,23 @@ document.getElementById("pathfield").addEventListener('keydown', (event) => {
     folderFetch();
   }
 });
+
+document.getElementById("console").addEventListener('keydown', (event) => {
+  if(event.key === 'Enter') {
+    event.preventDefault();
+    document.getElementById('log').innerHTML += document.getElementById("console").value + '\n';
+    eval(document.getElementById("console").value);
+    document.getElementById("console").value = '';
+  }
+});
+
+document.getElementById('Run').addEventListener('click', () => {
+  eval(textarea.value);
+  document.getElementById('log').innerHTML += console.log() + '\n';
+  
+});
+
+document.getElementById("console").value
 
 window.addEventListener("error", errorlog);
 eval(document.getElementById("editor").value);
