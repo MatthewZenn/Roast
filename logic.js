@@ -6,7 +6,7 @@ var javafile = "";
 var folderPath = "";
 
 console.log = function(message) {
-    snip.innerHTML += message + "\n";
+    document.getElementById("log").innerHTML += message + "\n";
 };
 
 document.getElementById("logo").addEventListener('click', () => {
