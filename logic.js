@@ -1,4 +1,4 @@
-
+const fs = require('fs-extra');
 const textarea = document.getElementById('editor');
 const numbers = document.getElementById("numbers");
 
@@ -7,6 +7,14 @@ var folderPath = "";
 
 console.log = function(message) {
     document.getElementById("log").innerHTML += message + "\n";
+};
+
+console.error = function(error) {
+  document.getElementById("log").innerHTML += error + "\n";
+};
+
+console.warn = function(warn) {
+  document.getElementById("log").innerHTML += warn + "\n";
 };
 
 document.getElementById("logo").addEventListener('click', () => {
@@ -22,6 +30,7 @@ textarea.addEventListener("keyup", (e) => {
   numbers.innerHTML = Array(num).fill("<span></span>").join("");
   
 });
+
 textarea.addEventListener("keydown", (event) => {
   if (event.key === "Tab") {
     const start = textarea.selectionStart;
@@ -55,22 +64,12 @@ document.getElementById('Run').addEventListener('click', () => {
   eval(textarea.value);
 });
 
-document.getElementById("console").value
+document.getElementById('delete').addEventListener('click', () => {
+  textarea.value = '';
+  document.getElementById('log').value = '';
+});
 
 window.addEventListener("error", errorlog);
-eval(document.getElementById("editor").value);
-
-function errorlog(Error) {
-  if (Error) {
-    errs.push(Error);
-    document.getElementById("logger").value += Error.message + '\n';
-    document.getElementById("error").innerHTML = '<span id="status"></span> ' + errs.length + ' Errors';
-    document.getElementById("status").style.background = "#FF5A5A";
-  }
-  else {
-    return;
-  }
-}
 
 async function folderFetch () {
   fs.readdir(folderPath, (files) => {

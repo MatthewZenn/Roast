@@ -25,7 +25,7 @@ header {
   width: 100%;
   left: 0;
   top: 0;
-  border-bottom: 2px solid rgb(70, 135, 255);
+  border-bottom: 2px solid #a48bff;
 }
 
 #pathfield {
@@ -46,7 +46,7 @@ header {
 }
 
 #pathfield:focus {
-  border: 1px solid rgb(70, 135, 255);
+  border: 1px solid #a48bff;
 }
 
 .icon {
@@ -80,7 +80,7 @@ font-weight: 500;
 
 #close:hover {
 cursor: pointer;
-color: rgb(255, 70, 70);
+color: #ff5f5f;
 }
 
 #min {
@@ -185,7 +185,7 @@ cursor: pointer;
   position: relative;
   font-family: SegoeIcons;
   font-size: 14pt;
-  color: rgb(70, 135, 255);
+  color: #a48bff;
   top: 5px;
   left: 5px;
 }
@@ -195,7 +195,7 @@ cursor: pointer;
   font-family: Consolas;
   font-weight: lighter;
   font-size: 12pt;
-  color: rgb(70, 135, 255);
+  color: #a48bff;
   outline: none;
   background-color: transparent;
   border: none;
@@ -243,7 +243,7 @@ cursor: pointer;
 #Run {
   position: relative;
   left: 3px;
-  color: rgb(70, 135, 255);
+  color: #a48bff;
   font-family: SegoeIcons;
   font-size: 12pt;
   background-color: transparent;
@@ -259,7 +259,7 @@ cursor: pointer;
 #copy {
   position: relative;
   left: 3px;
-  color: rgb(70, 135, 255);
+  color: #a48bff;
   font-family: SegoeIcons;
   font-size: 12pt;
   background-color: transparent;
@@ -275,7 +275,7 @@ cursor: pointer;
 #delete {
   position: relative;
   left: 3px;
-  color: rgb(70, 135, 255);
+  color: #ff5f5f;
   font-family: SegoeIcons;
   font-size: 12pt;
   background-color: transparent;
@@ -302,7 +302,7 @@ cursor: pointer;
   z-index: -2;
   background-color: #292e30;
   border: none;
-  color: #dfe6e9;
+  color: #636e72;
   font-family: Consolas;
   font-size: 12pt;
   outline: none;
