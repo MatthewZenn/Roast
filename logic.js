@@ -5,6 +5,10 @@ const numbers = document.getElementById("numbers");
 var javafile = "";
 var folderPath = "";
 
+console.log = function(message) {
+    snip.innerHTML += message + "\n";
+};
+
 document.getElementById("logo").addEventListener('click', () => {
   window.location.reload();
 });
@@ -49,8 +53,6 @@ document.getElementById("console").addEventListener('keydown', (event) => {
 
 document.getElementById('Run').addEventListener('click', () => {
   eval(textarea.value);
-  document.getElementById('log').innerHTML += console.log() + '\n';
-  
 });
 
 document.getElementById("console").value
